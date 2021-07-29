@@ -1,0 +1,19 @@
+categories: 分类_t
+search: 搜索_t
+tags: 标签_t
+tagcloud: 标签云_t
+tweets: 推文_t
+prev: 上一页_t
+next: 下一页_t
+comment: 留言_t
+archive_a: 归档_t
+archive_b: 归档：%s_t
+page: 第 %d 页_t
+recent_posts: 最新文章_t
+newer: Newer
+older: Older
+share: Share
+powered_by: Powered by
+rss_feed: RSS Feed
+category: Category
+tag: Tag
