@@ -135,3 +135,36 @@
     $container.removeClass('mobile-nav-on');
   });
 })(jQuery);
+
+// Lefter
+
+var lefter = document.getElementById('lefter'),
+  graymask = document.getElementById('graymask'),
+  ethan = document.getElementById('ethan').children[0],
+  panelClock = document.getElementById('panel-datetime')
+
+ethan.style.display = 'none'
+lefter.style.display = 'none'
+setTimeout(() => {
+  ethan.style.display = 'block'
+  lefter.style.display = 'block'
+}, 200);
+
+document.getElementById('menu-icon').onclick = function(){
+  lefter.style.transform = 'rotateY(0deg)'
+  graymask.style.display = 'block'
+  ethan.style.opacity = '1'
+}
+graymask.onclick = function(){
+  lefter.style.transform = 'rotateY(90deg)';
+  graymask.style.display = 'none';
+  ethan.style.display = 'none'
+  ethan.style.opacity = '0'
+  setTimeout(() => {
+    ethan.style.display = 'block'
+  }, 800);
+}
+setInterval(() => {
+  var date = new Date()
+  panelClock.innerHTML = date.toLocaleDateString() + ' ' + date.getHours() + ':' + date.getMinutes();
+}, 500);
