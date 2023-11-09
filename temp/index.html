@@ -56,26 +56,26 @@
 				border-color: transparent;
 				line-height: 1.5;
 			}
-				&.parent_background { border-color: yellow; }
-				&.parent_boder { border-color: color-mix(in srgb, yellow, yellowgreen); }
-				&.parent_outline { border-color: yellowgreen; }
+				mark.parent_background { border-color: yellow; }
+				mark.parent_boder { border-color: color-mix(in srgb, yellow, yellowgreen); }
+				mark.parent_outline { border-color: yellowgreen; }
 
-				&.neg_stack_level { border-color: hsl(271, 76%, 93%); }
+				mark.neg_stack_level { border-color: hsl(271, 76%, 93%); }
 
-				&.normal_block { border-color: hsl(271, 76%, 83%); }
-				&.float_block { border-color: hsl(271, 76%, 73%); }
-				&.normal_inline { border-color: hsl(271, 76%, 63%); }
-				&.inline_block { border-color: hsl(271, 76%, 53%); }
+				mark.normal_block { border-color: hsl(271, 76%, 83%); }
+				mark.float_block { border-color: hsl(271, 76%, 73%); }
+				mark.normal_inline { border-color: hsl(271, 76%, 63%); }
+				mark.inline_block { border-color: hsl(271, 76%, 53%); }
 
-				&.nil_stack_level { border-color: hsl(271, 76%, 43%); }
-				&.pos_stack_level { border-color: hsl(271, 76%, 33%); }
+				mark.nil_stack_level { border-color: hsl(271, 76%, 43%); }
+				mark.pos_stack_level { border-color: hsl(271, 76%, 33%); }
 
-				&.stack_outline { border-color: lightgray }
-				&.block_outline { border-color: darkgray; }
-				&.inline_outline { border-color: gray; }
+				mark.stack_outline { border-color: lightgray }
+				mark.block_outline { border-color: darkgray; }
+				mark.inline_outline { border-color: gray; }
 
-				&.normal_border { border-color: whitesmoke; }
-				&.normal_linebox { border-color: black; }
+				mark.normal_border { border-color: whitesmoke; }
+				mark.normal_linebox { border-color: black; }
 			/* } */
 		/* } */
 	</style>
@@ -152,7 +152,7 @@
  +- [positioned block] block        | none  | absolute | auto (treat as stacking context)
  +- [stacking context] block        | none  | absolute | 1</code></pre>
 
- 			<section style="display: flow-root">
+ 			<section style="display: flow-root; min-width: 45rem;">
 				<h1 style="font-size: 1rem">The Painting Order in Stacking Context</h1>
 
 				1. <mark class="parent_background">background</mark>, <mark class="parent_boder">border</mark><br>
