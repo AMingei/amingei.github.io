@@ -1,184 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<style>
-		* {
-			box-sizing: border-box;
-		}
-
-		html {
-			font-size: 14px;
-			font-family: 'Courier New', 'Consolas', Courier, monospace;}
-			html pre, html code {
-				font-size: .8rem;
-				font-family: inherit;
-			}
-		/* } */
-
-		/* .example_1 { */
-			.example_1 .demonstration {
-				float: left;
-				position: relative;
-				width: 28rem;
-				height: 28rem;
-			}
-			.example_1 .demonstration .rect {
-					width: 9.5rem;
-					height: 9.5rem;
-					border: .25rem solid whitesmoke;
-					outline: .25rem solid lightgray;
-				}
-
-				.example_1 .demonstration .rect_l {
-					width: 13rem;
-					height: 13rem;
-					background-color: yellow;
-					border: .5rem solid color-mix(in srgb, yellow, yellowgreen);
-					outline: .5rem solid yellowgreen;
-				}
-
-				.example_1 .demonstration .parent_stacking_context {
-					position: relative;
-					z-index: 0;
-					inset: 4rem 0 0 4rem;
-				}
-			/* } */
-
-			.example_1 .instruction mark {
-				background: none;
-
-				padding-left: .25rem;
-				border-bottom: 1px solid;
-				border-left: .5rem solid;
-				border-color: transparent;
-				line-height: 1.5;
-			}
-			.example_1 .instruction	mark.parent_background { border-color: yellow; }
-			.example_1 .instruction	.example_1 .instructionmark.parent_boder { border-color: color-mix(in srgb, yellow, yellowgreen); }
-			.example_1 .instruction	mark.parent_outline { border-color: yellowgreen; }
-
-			.example_1 .instruction	mark.neg_stack_level { border-color: hsl(271, 76%, 93%); }
-
-			.example_1 .instruction	mark.normal_block { border-color: hsl(271, 76%, 83%); }
-			.example_1 .instruction	mark.float_block { border-color: hsl(271, 76%, 73%); }
-			.example_1 .instruction	mark.normal_inline { border-color: hsl(271, 76%, 63%); }
-			.example_1 .instruction	mark.inline_block { border-color: hsl(271, 76%, 53%); }
-
-			.example_1 .instruction	mark.nil_stack_level { border-color: hsl(271, 76%, 43%); }
-			.example_1 .instruction	mark.pos_stack_level { border-color: hsl(271, 76%, 33%); }
-
-			.example_1 .instruction	mark.stack_outline { border-color: lightgray }
-			.example_1 .instruction	mark.block_outline { border-color: darkgray; }
-			.example_1 .instruction	mark.inline_outline { border-color: gray; }
-
-			.example_1 .instruction	mark.normal_border { border-color: whitesmoke; }
-			.example_1 .instruction	mark.normal_linebox { border-color: black; }
-			/* } */
-		/* } */
-	</style>
-</head>
-<body>
-	<div class="example_1">
-		<div class="demonstration">
-			<div class="rect_l parent_stacking_context">
-				
-				<div class="rect" 
-				style="position: absolute; 
-				z-index: -1; 
-				inset: -3.5rem 0 0 -.5rem; 
-				background: hsl(271, 76%, 93%);">
-				stack level &lt; 0
-				</div>
-
-				<div class="rect" 
-				style="margin: -2rem 0 -6.25rem -2rem; 
-				outline-color: darkgrey; 
-				background: hsl(271, 76%, 83%);">
-				normal block
-				</div>
-
-				<div class="rect" 
-				style="float: left; 
-				margin: 0 0 -7.5rem 1.25rem; 
-				background: hsl(271, 76%, 73%);">
-				float block
-				</div>
-
-				<div class="rect" 
-				style="display: inline; 
-				margin: 0 0 0 3rem; 
-				line-height: 1.25; 
-				white-space: nowrap; 
-				outline-color: gray; 
-				background: hsl(271, 76%, 63%);">
-				normal inline&ensp;&ensp;
-				</div>
-
-				<div class="rect" 
-				style="display: inline-block; 
-				margin: 0 0 0 4.5rem; 
-				background: hsl(271, 76%, 53%);">
-				inline block
-				</div>
-
-				<div class="rect" 
-				style="position: absolute; 
-				inset: 7.75rem 0 0 7.75rem; 
-				background: hsl(271, 76%, 43%);">
-				stack level = 0
-				</div>
-
-				<div class="rect" 
-				style="position: absolute; 
-				z-index: 1; 
-				inset: 11rem 0 0 11rem; 
-				background: hsl(271, 76%, 33%);">
-				stack level &gt; 0
-				</div>
-			</div>
-		</div>
-		<div class="instruction">
-			<pre><code>[ ... ]                display      | float | position | z-index
-
-[stacking context]     block        | none  | absolute | 0
- +- [stacking context] block        | none  | absolute | -1
- +- [in-flow block]    block        | none  | static   | auto
- +- [floated block]    block        | left  | static   | auto (treat as stacking context)
- +- [in-flow inline]   inline       | none  | static   | auto
- +- [inline-block]     inline-block | none  | static   | auto (treat as stacking context)
- +- [positioned block] block        | none  | absolute | auto (treat as stacking context)
- +- [stacking context] block        | none  | absolute | 1</code></pre>
-
- 			<section style="display: flow-root; min-width: 45rem;">
-				<h1 style="font-size: 1rem">The Painting Order in Stacking Context</h1>
-
-				1. <mark class="parent_background">background</mark>, <mark class="parent_boder">border</mark><br>
-				2. <mark class="neg_stack_level">child stacking contexts with `stack level` &lt; 0</mark><br>
-				3. <mark class="normal_block">in-flow, non-inline-level, non-positioned descendants' background</mark> & <mark class="normal_border">border</mark><br>
-				4. <mark class="float_block">non-positioned floats</mark>: treat as a stacking context<br>
-				5. in-flow, non-positioned descendants:<br>
-				&emsp;&emsp;1. <mark class="normal_inline">for inline: background</mark>, <mark class="normal_border">border</mark>, <mark class="normal_linebox">line boxes</mark><br>
-				&emsp;&emsp;2. <mark class="inline_block">for inline-block</mark>, inline-table: treat as a stacking context<br>
-				6. <mark class="block_outline"><mark class="inline_outline">in-flow, non-positioned descendants' outline</mark></mark><br>
-				7. <mark class="stack_outline"><mark class="parent_outline"><mark class="stack_outline">outline</mark></mark></mark><br>
-				8. child stacking contexts or <mark class="nil_stack_level">positioned descendants with `stack level` = 0</mark><br>
-				9. <mark class="pos_stack_level">child stacking contexts with `stack level` > 0</mark><br>
-
-				<p>＊ 后代的绘制顺序按照深度优先遍历 rendering tree 确定。</p>
-
-			</section>
-		</div>
-	</div>
-
-	<p style="display: flex; flex-direction: row;">
-		references:&emsp;
-		<span>
-			<a href="https://www.w3.org/TR/CSS22/visuren.html#z-index">CSS 2.2 Spec. 9.9.1 z-index</a><br>
-			<a href="https://www.w3.org/TR/CSS22/zindex.html#painting-order">CSS 2.2 Spec. Appendix E.2 painting-order</a>
-		</span>
-	</p>
-</body>
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xxxxx UI Document</title>
+    <script>
+      if(window.devicePixelRatio == 1.25) {
+        window.document.documentElement.style.fontSize = '14px'
+      }
+    </script>
+    <script type="module" crossorigin src="/assets/index-699061a8.js"></script>
+    <link rel="stylesheet" href="/assets/index-8ff33737.css">
+  </head>
+  <body>
+    <svg style="display: none" width="16" height="16" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <g id="icon-info"><path d="M24 44C29.5228 44 34.5228 41.7614 38.1421 38.1421C41.7614 34.5228 44 29.5228 44 24C44 18.4772 41.7614 13.4772 38.1421 9.85786C34.5228 6.23858 29.5228 4 24 4C18.4772 4 13.4772 6.23858 9.85786 9.85786C6.23858 13.4772 4 18.4772 4 24C4 29.5228 6.23858 34.5228 9.85786 38.1421C13.4772 41.7614 18.4772 44 24 44Z" fill="currentColor" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M24 11C25.3807 11 26.5 12.1193 26.5 13.5C26.5 14.8807 25.3807 16 24 16C22.6193 16 21.5 14.8807 21.5 13.5C21.5 12.1193 22.6193 11 24 11Z" fill="#FFF"/><path d="M24.5 34V20H23.5H22.5" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 34H28" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+        <g id="eg-toggle"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm.06 17v-2.01H12c-1.28 0-2.56-.49-3.54-1.46a5.006 5.006 0 0 1-.64-6.29l1.1 1.1c-.71 1.33-.53 3.01.59 4.13c.7.7 1.62 1.03 2.54 1.01v-2.14l2.83 2.83L12.06 19zm4.11-4.24l-1.1-1.1c.71-1.33.53-3.01-.59-4.13A3.482 3.482 0 0 0 12 8.5h-.06v2.15L9.11 7.83L11.94 5v2.02c1.3-.02 2.61.45 3.6 1.45c1.7 1.7 1.91 4.35.63 6.29z" fill="currentColor"></path></g>
+      </defs>
+    </svg>
+    <div id="app"></div>
+    
+  </body>
 </html>
