@@ -1,0 +1,1 @@
+import{M as e}from"./MainContent-660cbc02.js";import{e as o,o as t,g as n,a}from"./index-804729dc.js";const s={class:"doc-content"},p=o({__name:"Guide",setup(c){return(r,_)=>(t(),n("div",s,[a(e)]))}});export{p as default};
