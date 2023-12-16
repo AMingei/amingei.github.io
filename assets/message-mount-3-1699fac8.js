@@ -1,0 +1,6 @@
+const s=`// 使用简写渲染\r
+message.default(options)\r
+message.primary(options)\r
+message.success(options)\r
+message.warning(options)\r
+message.error(options)`;export{s as default};

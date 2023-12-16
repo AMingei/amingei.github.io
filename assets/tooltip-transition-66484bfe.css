@@ -1,0 +1,1 @@
+.bounce-enter-active{animation:bounce-in .5s}.bounce-leave-active{transition:opacity .4s}.bounce-leave-to{opacity:0}@keyframes bounce-in{0%,to{opacity:1}50%{opacity:.25}}

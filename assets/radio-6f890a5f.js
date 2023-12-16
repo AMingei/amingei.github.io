@@ -1,0 +1,1 @@
+import{_ as c,b as n,o as l,e as r,w as e,f as t,g as a}from"./index-52b06097.js";const s={};function f(d,u){const o=n("ex-radio"),_=n("ex-flex");return l(),r(_,null,{default:e(()=>[t(o,null,{default:e(()=>[a("魏国")]),_:1}),t(o,null,{default:e(()=>[a("蜀国")]),_:1}),t(o,null,{default:e(()=>[a("吴国")]),_:1})]),_:1})}const i=c(s,[["render",f]]);export{i as default};

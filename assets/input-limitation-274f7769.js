@@ -1,0 +1,1 @@
+import{_ as a,b as t,o as c,e as r,w as _,f as o}from"./index-52b06097.js";const s={};function l(p,x){const e=t("ex-input"),n=t("ex-flex");return c(),r(n,{width:"50%",vertical:""},{default:_(()=>[o(e,{placeholder:"不要超出 12 个字符","max-length":"12"}),o(e,{type:"textarea",placeholder:"不要超出 99 个字符","max-length":"99"})]),_:1})}const f=a(s,[["render",l]]);export{f as default};
