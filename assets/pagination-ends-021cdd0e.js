@@ -1,1 +1,0 @@
-import{d as t,r as l,b as s,o as p,e as r}from"./index-52b06097.js";const d=t({__name:"pagination-ends",setup(u){const e=l(1);return(m,o)=>{const n=s("ex-pagination");return p(),r(n,{modelValue:e.value,"onUpdate:modelValue":o[0]||(o[0]=a=>e.value=a),"page-count":20,"ends-controller":""},null,8,["modelValue"])}}});export{d as default};

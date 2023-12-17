@@ -1,1 +1,0 @@
-import{d as e,l as t,u as o,o as s,c as a,g as r,y as c}from"./index-52b06097.js";const n={class:"example-box"},d=e({__name:"tooltip-title",setup(i){return(p,_)=>t((s(),a("div",n,[r("directive")])),[[o(c),"<strong>阿巴阿巴</strong>","top",{raw:!0}]])}});export{d as default};

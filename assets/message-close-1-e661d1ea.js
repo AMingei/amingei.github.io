@@ -1,1 +1,0 @@
-import{d as s,b as a,o as n,e as c,w as r,g as _,z as m}from"./index-52b06097.js";const x=s({__name:"message-close-1",setup(p){const e=m(),t=()=>e({text:"点击右侧 ✖ 主动关闭 Message",duration:0,closable:!0});return(u,l)=>{const o=a("ex-button");return n(),c(o,{type:"primary",onClick:t},{default:r(()=>[_("Mount message")]),_:1})}}});export{x as default};

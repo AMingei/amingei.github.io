@@ -1,1 +1,0 @@
-import{d as t,r as l,b as p,o as s,e as u}from"./index-52b06097.js";const i=t({__name:"pagination",setup(r){const e=l(1);return(m,o)=>{const n=p("ex-pagination");return s(),u(n,{modelValue:e.value,"onUpdate:modelValue":o[0]||(o[0]=a=>e.value=a),"page-count":20,"slot-count":5},null,8,["modelValue"])}}});export{i as default};

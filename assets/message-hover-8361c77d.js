@@ -1,1 +1,0 @@
-import{d as n,b as s,o as a,e as r,w as c,g as _,z as p}from"./index-52b06097.js";const l=n({__name:"message-hover",setup(m){const e=p(),t=()=>e({text:"当没有悬浮时 3 秒后消失",canBeHover:!0});return(u,x)=>{const o=s("ex-button");return a(),r(o,{type:"primary",onClick:t},{default:c(()=>[_("Hover")]),_:1})}}});export{l as default};

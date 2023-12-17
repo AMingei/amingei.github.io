@@ -1,1 +1,0 @@
-import{_ as a,b as n,o as l,e as s,w as e,f as c,g as t}from"./index-52b06097.js";const r={};function x(f,u){const o=n("ex-checkbox"),_=n("ex-flex");return l(),s(_,null,{default:e(()=>[c(o,null,{default:e(()=>[t("魏国")]),_:1}),c(o,null,{default:e(()=>[t("蜀国")]),_:1}),c(o,null,{default:e(()=>[t("吴国")]),_:1})]),_:1})}const p=a(r,[["render",x]]);export{p as default};

@@ -1,1 +1,0 @@
-import{d as s,b as t,o as _,e as c,w as r,f as l}from"./index-52b06097.js";const m=s({__name:"tag-editable",setup(p){function o(e){alert(e)}return(e,f)=>{const n=t("ex-tag"),a=t("ex-flex");return _(),c(a,null,{default:r(()=>[l(n,{editable:"",onInsert:o})]),_:1})}}});export{m as default};
