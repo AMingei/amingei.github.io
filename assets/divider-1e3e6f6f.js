@@ -1,0 +1,1 @@
+import{_ as t}from"./index-92da26ad.js";import{f as r,a as n,j as a,l as e,h as c,F as s}from"./vendor-e419f654.js";const _={};function d(m,f){const o=r("ex-d");return n(),a(s,null,[e(" 公若不弃 布请拜为义父 "),c(o),e(" 大丈夫生居天地间 岂能郁郁久居人下 ")],64)}const i=t(_,[["render",d]]);export{i as default};

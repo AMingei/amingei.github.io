@@ -1,0 +1,1 @@
+import{_ as a}from"./index-92da26ad.js";import{f as o,a as n,b as c,e as s,h as r}from"./vendor-e419f654.js";const l={};function _(d,f){const e=o("ex-number"),t=o("ex-flex");return n(),c(t,{width:"50%",vertical:""},{default:s(()=>[r(e,{placeholder:"disabled",disabled:""}),r(e,{placeholder:"READONLY",readonly:""})]),_:1})}const p=a(l,[["render",_]]);export{p as default};

@@ -1,1 +1,0 @@
-import{o as t,e,w as a,g as o,u as r,K as s}from"./index-812272eb.js";const l={__name:"import-manual",setup(n){return(u,c)=>(t(),e(r(s),null,{default:a(()=>[o("Button")]),_:1}))}};export{l as default};

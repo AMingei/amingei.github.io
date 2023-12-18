@@ -1,1 +1,0 @@
-import{d as s,r,b as o,o as d,e as _,w as c,f as p}from"./index-812272eb.js";const f=s({__name:"date-selector",setup(m){const e=r(new Date);return(u,t)=>{const a=o("ex-date-selector"),n=o("ex-flex");return d(),_(n,{width:"290px"},{default:c(()=>[p(a,{modelValue:e.value,"onUpdate:modelValue":t[0]||(t[0]=l=>e.value=l)},null,8,["modelValue"])]),_:1})}}});export{f as default};

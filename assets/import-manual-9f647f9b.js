@@ -1,0 +1,1 @@
+import{H as t}from"./index-92da26ad.js";import{a,b as e,e as r,l as o,v as s}from"./vendor-e419f654.js";const m={__name:"import-manual",setup(n){return(c,u)=>(a(),e(s(t),null,{default:r(()=>[o("Button")]),_:1}))}};export{m as default};

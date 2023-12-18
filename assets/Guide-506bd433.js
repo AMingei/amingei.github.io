@@ -1,0 +1,1 @@
+import{L as o,M as t,a as s}from"./MainFooter-902a444a.js";import{g as a}from"./index-92da26ad.js";import{d as n,a as r,j as c,h as e,v as i}from"./vendor-e419f654.js";const u={class:"doc-content"},h=n({__name:"Guide",setup(d){return(m,p)=>(r(),c("div",u,[e(o,{routes:i(a)},null,8,["routes"]),e(t),e(s)]))}});export{h as default};

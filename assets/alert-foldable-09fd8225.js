@@ -1,0 +1,1 @@
+import{_ as o}from"./index-92da26ad.js";import{f as t,a as r,b as c}from"./vendor-e419f654.js";const l={};function n(a,s){const e=t("ex-alert");return r(),c(e,{foldable:"",title:"FOLDABLE ALERT",description:"Click 'more...' / 'fold' to unfold / fold the alert descroptions."})}const d=o(l,[["render",n]]);export{d as default};

@@ -1,0 +1,1 @@
+import{_ as o}from"./index-92da26ad.js";import{f as e,a as s,b as a,e as c,i as n}from"./vendor-e419f654.js";const r={},_=n("div",{class:"example-box"},"HTML",-1);function p(i,l){const t=e("ex-tooltip");return s(),a(t,{placement:"top",title:"<strong>阿巴阿巴</strong>","as-raw":""},{default:c(()=>[_]),_:1})}const x=o(r,[["render",p]]);export{x as default};

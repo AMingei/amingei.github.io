@@ -1,1 +1,0 @@
-import{_ as o,K as e,b as n,o as s,e as a,w as c,g as r}from"./index-812272eb.js";const _={components:{ExButton:e}};function p(u,l,x,f,m,d){const t=n("ex-button");return s(),a(t,null,{default:c(()=>[r("Button")]),_:1})}const B=o(_,[["render",p]]);export{B as default};

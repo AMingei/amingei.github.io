@@ -1,0 +1,1 @@
+import{d as t,r as l,f as s,a as p,b as r}from"./vendor-e419f654.js";const m=t({__name:"pagination-basic",setup(u){const e=l(1);return(i,a)=>{const o=s("ex-pagination");return p(),r(o,{modelValue:e.value,"onUpdate:modelValue":a[0]||(a[0]=n=>e.value=n),"page-count":20,basic:""},null,8,["modelValue"])}}});export{m as default};

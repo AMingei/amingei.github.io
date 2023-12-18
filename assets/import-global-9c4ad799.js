@@ -1,0 +1,1 @@
+import{_ as e}from"./index-92da26ad.js";import{f as o,a as n,b as r,e as a,l as c}from"./vendor-e419f654.js";const s={};function _(l,f){const t=o("ex-button");return n(),r(t,null,{default:a(()=>[c("Button")]),_:1})}const u=e(s,[["render",_]]);export{u as default};

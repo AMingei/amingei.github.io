@@ -1,0 +1,1 @@
+import{b as a}from"./index-92da26ad.js";import{d as n,f as s,a as r,b as c,e as _,l as m}from"./vendor-e419f654.js";const l=n({__name:"message-duration",setup(p){const e=a(),t=()=>e({text:"10 秒后消失",duration:1e4});return(i,u)=>{const o=s("ex-button");return r(),c(o,{type:"primary",onClick:t},{default:_(()=>[m("持续 10 秒")]),_:1})}}});export{l as default};

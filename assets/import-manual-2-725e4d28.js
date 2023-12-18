@@ -1,0 +1,1 @@
+import{_ as o,H as e}from"./index-92da26ad.js";import{f as n,a,b as s,e as r,l as c}from"./vendor-e419f654.js";const p={components:{ExButton:e}};function _(u,f,l,m,x,i){const t=n("ex-button");return a(),s(t,null,{default:r(()=>[c("Button")]),_:1})}const $=o(p,[["render",_]]);export{$ as default};
